@@ -1,0 +1,296 @@
+{
+  "students": [
+    {
+      "username": "ali",
+      "email": "ali@me.com",
+      "password": "123",
+      "subjects": [
+        {
+          "subjectName": "english",
+          "subjectId": "3",
+          "degree": 2
+        },
+        {
+          "subjectName": "الدراسات الإجتماعية",
+          "subjectId": "2",
+          "degree": 1
+        }
+      ],
+      "id": 1
+    },
+    {
+      "username": "Rami",
+      "email": "rami@me.com",
+      "password": "123",
+      "id": 3
+    },
+    {
+      "username": "Rania",
+      "email": "rania@me.com",
+      "password": "123",
+      "subjects": [
+        {
+          "subjectName": "lol",
+          "subjectId": "4",
+          "degree": 1
+        }
+      ],
+      "id": 4
+    },
+    {
+      "username": "test",
+      "email": "test@test.com",
+      "password": "123",
+      "id": 5
+    },
+    {
+      "username": "sami",
+      "email": "sami@me.com",
+      "password": "123",
+      "id": 7
+    },
+    {
+      "username": "عباس",
+      "email": "abbas@me.com",
+      "password": "123",
+      "id": 8
+    },
+    {
+      "username": "راندا",
+      "email": "roro@me.com",
+      "password": "123",
+      "subjects": [
+        {
+          "subjectName": "الرياضيات",
+          "subjectId": "1",
+          "degree": 1
+        },
+        {
+          "subjectName": "كيمياء",
+          "subjectId": "5",
+          "degree": 1
+        }
+      ],
+      "id": 9
+    }
+  ],
+  "doctors": [
+    {
+      "username": "Hani",
+      "email": "hani@me.com",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "username": "admin",
+      "email": "admin@admin.com",
+      "password": "123",
+      "id": 1
+    }
+  ],
+  "subjects": [
+    {
+      "id": 1,
+      "name": "الرياضيات",
+      "questions": [
+        {
+          "question": "2*2",
+          "answer1": "3",
+          "answer2": "4",
+          "answer3": "5",
+          "answer4": "6",
+          "correctAnswer": "4"
+        }
+      ]
+    },
+    {
+      "name": "الدراسات الإجتماعية",
+      "questions": [
+        {
+          "question": "أين تقع حشائش السافانا",
+          "answer1": "آسيا",
+          "answer2": "أمريكا الشمالية",
+          "answer3": "افريقيا",
+          "answer4": "أمريكا الجنوبية",
+          "correctAnswer": "آسيا"
+        },
+        {
+          "question": "ما هى اليونيسيف",
+          "answer1": "فاكهة استوائية",
+          "answer2": "راعى برشلونة",
+          "answer3": "مشروب طبيعى",
+          "answer4": "إحدى منظمات الامم المتحدة",
+          "correctAnswer": "فاكهة استوائية"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "name": "english",
+      "questions": [
+        {
+          "question": "how are you",
+          "answer1": "cool",
+          "answer2": "nice",
+          "answer3": "fine",
+          "answer4": "ملكش دعوة",
+          "correctAnswer": "cool"
+        },
+        {
+          "question": "time now",
+          "answer1": "4",
+          "answer2": "12",
+          "answer3": "7",
+          "answer4": "55",
+          "correctAnswer": "4"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "name": "lol",
+      "questions": [
+        {
+          "question": "q1",
+          "answer1": "1",
+          "answer2": "3",
+          "answer3": "2",
+          "answer4": "5",
+          "correctAnswer": "1"
+        },
+        {
+          "question": "q2",
+          "answer1": "333",
+          "answer2": "444",
+          "answer3": "666",
+          "answer4": "555",
+          "correctAnswer": "333"
+        }
+      ],
+      "id": 4
+    },
+    {
+      "image": [],
+      "name": "كيمياء",
+      "questions": [
+        {
+          "question": "الاول",
+          "answer1": "1",
+          "answer2": "4",
+          "answer3": "2",
+          "answer4": "3",
+          "correctAnswer": "1"
+        },
+        {
+          "question": "الثانى",
+          "answer1": "4",
+          "answer2": "5",
+          "answer3": "3",
+          "answer4": "6",
+          "correctAnswer": "4"
+        },
+        {
+          "question": "الثالث",
+          "answer1": "55",
+          "answer2": "88",
+          "answer3": "66",
+          "answer4": "77",
+          "correctAnswer": "55"
+        }
+      ],
+      "id": 5
+    }
+  ],
+  "loginNow": [
+    {
+      "username": "admin",
+      "email": "admin@admin.com",
+      "role": "doctors",
+      "userId": 1,
+      "loginTime": "2022-07-14T11:29:43.253Z",
+      "id": 1
+    }
+  ],
+  "loginLogs": [
+    {
+      "username": "admin",
+      "email": "admin@admin.com",
+      "role": "doctors",
+      "userId": 1,
+      "loginTime": "2022-07-06T06:25:00.416Z",
+      "id": 11
+    },
+    {
+      "username": "admin",
+      "email": "admin@admin.com",
+      "role": "doctors",
+      "userId": 1,
+      "loginTime": "2022-07-06T07:39:56.328Z",
+      "id": 12
+    },
+    {
+      "username": "admin",
+      "email": "admin@admin.com",
+      "role": "doctors",
+      "userId": 1,
+      "loginTime": "2022-07-13T16:21:23.553Z",
+      "id": 30
+    },
+    {
+      "username": "ali",
+      "email": "ali@me.com",
+      "role": "students",
+      "userId": 1,
+      "loginTime": "2022-07-13T16:22:32.305Z",
+      "id": 31
+    },
+    {
+      "username": "admin",
+      "email": "admin@admin.com",
+      "role": "doctors",
+      "userId": 1,
+      "loginTime": "2022-07-14T09:23:48.487Z",
+      "id": 32
+    },
+    {
+      "username": "ali",
+      "email": "ali@me.com",
+      "role": "students",
+      "userId": 1,
+      "loginTime": "2022-07-14T11:12:31.380Z",
+      "id": 33
+    },
+    {
+      "username": "Rania",
+      "email": "rania@me.com",
+      "role": "students",
+      "userId": 4,
+      "loginTime": "2022-07-14T11:13:05.837Z",
+      "id": 34
+    },
+    {
+      "username": "admin",
+      "email": "admin@admin.com",
+      "role": "doctors",
+      "userId": 1,
+      "loginTime": "2022-07-14T11:13:29.070Z",
+      "id": 35
+    },
+    {
+      "username": "راندا",
+      "email": "roro@me.com",
+      "role": "students",
+      "userId": 9,
+      "RegisterTime": "2022-07-14T11:28:50.732Z",
+      "id": 36
+    },
+    {
+      "username": "admin",
+      "email": "admin@admin.com",
+      "role": "doctors",
+      "userId": 1,
+      "loginTime": "2022-07-14T11:29:43.253Z",
+      "id": 37
+    }
+  ]
+}

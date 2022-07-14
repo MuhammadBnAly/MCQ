@@ -1,0 +1,52 @@
+@import '../../styles/colors';
+.examBox {
+    width: 90%;
+    margin: 50px auto;
+    border: 1px solid $black;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: $bgColorLightr;
+    box-shadow: 0 0 100px 5px rgba($color: #000, $alpha: 0.5);
+    .examhead {
+        margin-top: -50px;
+        margin-bottom: 20px;
+        h2 {
+            font-family: 'Almarai', sans-serif;
+            display: inline-block;
+            padding: 15px 88px;
+            // background-color: $green;
+            background-image: linear-gradient(to bottom right, $green, #0f9);
+            border-radius: 30px;
+            font-size: 28px;
+            color: #FFf;
+            box-shadow: 0 0 5px 2px rgba($color: #0f9, $alpha: 0.5);
+        }
+    }
+    .quizBox {
+        .row {
+            padding-right: 30px;
+            .col-sm-12 {
+                margin: 7px 0px;
+                font-size: 20px;
+            }
+        }
+        strong {
+            font-size: 22px;
+        }
+    }
+}
+
+.theGreen {
+    background-image: linear-gradient(to bottom right, $green, #0f9);
+}
+
+::-moz-selection {
+    /* Code for Firefox */
+    color: red;
+    background: yellow;
+}
+
+ ::selection {
+    color: green;
+    background: white;
+}

@@ -1,0 +1,51 @@
+<div class="examBox">
+    <div class="examhead text-center">
+        <h2>اختبار {{subject?.name}}</h2>
+    </div>
+    <div class="quizBox" *ngFor="let item of subject?.questions; let index = index">
+        <strong>
+            <span class="text-danger">
+                سؤال {{index + 1}}
+            </span>
+            .  {{item.question}}
+        </strong>
+
+        <div class="row mt-3">
+
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <mat-radio-button *ngIf="user?.role == 'students' && !showResult && validExam" name="{{index}}" value="{{item.answer1}}" color="warn" (change)="getAnswer($event)">
+                </mat-radio-button>
+                <label>أ  .  {{item.answer1}}</label>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <mat-radio-button *ngIf="user?.role == 'students' && !showResult && validExam" name="{{index}}" value="{{item.answer2}}" color="warn" (change)="getAnswer($event)">
+                </mat-radio-button>
+                <label>ب .  {{item.answer2}}</label>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <mat-radio-button *ngIf="user?.role == 'students' && !showResult && validExam" name="{{index}}" value="{{item.answer3}}" color="warn" (change)="getAnswer($event)">
+                </mat-radio-button>
+                <label>جـ.  {{item.answer3}}</label>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <mat-radio-button *ngIf="user?.role == 'students' && !showResult && validExam" name="{{index}}" value="{{item.answer4}}" color="warn" (change)="getAnswer($event)">
+                </mat-radio-button>
+                <label>د  .  {{item.answer4}}</label>
+            </div>
+        </div>
+        <div class="text-start" *ngIf="user?.role == 'doctors'">
+            <button mat-raised-button (click)="delete(index)" color="warn">حذف</button>
+        </div>
+        <hr>
+
+    </div>
+    <div class="text-center" *ngIf="user?.role == 'students'">
+        <button *ngIf="!showResult && validExam" mat-raised-button (click)="getResult()" class="theGreen px-5 fs-5">
+            النتيجة
+        </button>
+        <span *ngIf="showResult || !validExam" class="text-success fs-4">
+            {{subject?.questions.length}} /  {{total}}
+        </span>
+    </div>
+
+</div>

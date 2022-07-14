@@ -1,0 +1,33 @@
+<div class="login">
+    <div class="loginhead text-center">
+        <h2>تسجيل الدخول</h2>
+    </div>
+    <form class="form" [formGroup]="loginForm">
+        <div class="row">
+            <div class="col-sm-12 mb-3">
+                <mat-radio-group (change)="getRole($event)" formControlName="type">
+                    <mat-radio-button value="students" color="warn" class="w-25">طالب</mat-radio-button>
+                    <mat-radio-button value="doctors" color="warn" class="w-25">دكتور</mat-radio-button>
+                </mat-radio-group>
+            </div>
+            <div class="sm:col-12 md:col-6 lg:col-4">
+                <mat-form-field appearance="outline" color="warn">
+                    <mat-label>الإيميل</mat-label>
+                    <input matInput type="email" formControlName="email" placeholder="example@inc.com">
+                </mat-form-field>
+            </div>
+
+            <div class="sm:col-12 md:col-6 lg:col-4">
+                <mat-form-field appearance="outline" color="warn">
+                    <mat-label>كلمة المرور</mat-label>
+                    <input matInput type="password" formControlName="password">
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="text-right loginfoot">
+            <b><a routerLink="/register" color="primary">إنشاء حساب</a></b>
+            <button mat-raised-button color="accent" (click)=" submit() ">دخول</button>
+        </div>
+
+    </form>
+</div>

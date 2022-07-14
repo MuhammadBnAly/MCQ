@@ -1,0 +1,50 @@
+@import '../../styles/colors';
+.login {
+    background-color: $bgColorLightr;
+    color: $white;
+    width: 60%;
+    margin: 100px auto;
+    border: 1px solid $black;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 100px 5px rgba($color: #000, $alpha: 0.5);
+    .loginhead {
+        margin-top: -50px;
+        margin-bottom: 20px;
+        h2 {
+            display: inline-block;
+            padding: 15px 88px;
+            background-image: linear-gradient(to bottom right, $green, #0f9);
+            // background-color: $green;
+            border-radius: 30px;
+            font-size: 28px;
+            /* margin-top: 0px; */
+            color: $white;
+        }
+    }
+    mat-form-field {
+        width: 100%;
+    }
+    .loginfoot {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        button {
+            margin-top: 15px;
+            padding: 0px 30px;
+            font-size: 18px;
+            background-image: linear-gradient(to bottom right, $green, #0f9);
+        }
+        a {
+            text-decoration: none;
+            color: $greenLighter;
+        }
+    }
+}
+
+.alert-danger {
+    background-color: #f20;
+    color: #FFF;
+    margin-top: 15px;
+    font-size: 18px;
+}

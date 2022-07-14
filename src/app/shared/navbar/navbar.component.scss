@@ -1,0 +1,73 @@
+@import '../../styles/colors';
+.container {
+    display: contents;
+    justify-content: space-between;
+}
+
+.navbar {
+    width: 100%;
+    background-color: $bgColorLightr;
+    margin: 0;
+    border-radius: 0;
+    border: 0;
+    z-index: 999;
+    &.welcome {
+        background-color: transparent!important;
+        position: fixed;
+    }
+    .nav {
+        a {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            transition: all 0.3s ease-in-out;
+            border-bottom: 1px solid transparent;
+            padding: 10px;
+            margin: 5px 0;
+            text-decoration: none;
+            &:hover {
+                color: $textColor;
+                border-bottom: 1px solid $textColor;
+            }
+        }
+        .active {
+            a {
+                background-color: $bgColorLightr;
+                color: $green;
+                border-bottom: 1px solid $green;
+                // box-shadow: 0px 5px 10px rgb(0 0 0 / 30%);
+            }
+        }
+        &.mainNav {
+            margin-left: 20px;
+        }
+        .username {
+            background-color: $bgColor;
+            padding: 7px 13px;
+            color: $white;
+            border: 2px solid $textColor;
+            border-radius: 50px;
+            box-shadow: 0px 2px 10px rgb(0 0 0 / 40%);
+            margin-left: 20px;
+            &:hover {
+                color: $green;
+                border-bottom: 1px solid $green;
+            }
+        }
+        .logout {
+            &:hover {
+                color: rgba(255, 0, 0, 0.8);
+                border-bottom: 1px solid rgba(255, 0, 0, 0.8);
+            }
+        }
+    }
+    .navbar-brand {
+        font-size: 32px!important;
+        color: #FFF;
+        padding: 10px;
+        img {
+            display: inline-block;
+            width: 55px;
+        }
+    }
+}

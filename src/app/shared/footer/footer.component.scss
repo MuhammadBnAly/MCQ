@@ -1,0 +1,20 @@
+@import '../../styles/colors';
+.footer {
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    height: 65px;
+    color: $black;
+    background-color: lightgray;
+    margin: 0;
+}
+
+.by {
+    color: $bgColor;
+    font-weight: bold;
+}

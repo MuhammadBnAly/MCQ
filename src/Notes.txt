@@ -1,0 +1,17 @@
+
+
+
+
+
+
+
+
+
+
+//Example API Request
+https://api.themoviedb.org/3/movie/550?api_key=6c1613d85db1fa5a286fffd43021ee5c
+
+
+//image size configuration
+https://api.themoviedb.org/3/configuration?api_key=6c1613d85db1fa5a286fffd43021ee5c
+

@@ -1,0 +1,123 @@
+<!--  -->
+<div class="new-exam">
+    <mat-horizontal-stepper linear #stepper [selectedIndex]="stepperIndex">
+        <mat-step label="اسم المادة" [completed]="startAdding">
+            <div class="addSubject">
+                <label>اسم المادة :</label>
+                <mat-form-field appearance="fill" color="accent">
+                    <mat-label>اسم المادة</mat-label>
+                    <input type="text" matInput [formControl]="name">
+                </mat-form-field>
+
+                <button class="theGreen" mat-raised-button matStepperNext (click)="startExam()">إضافة أسئلة</button>
+            </div>
+            <!-- <div class="addImage">
+                <label>أضف صورة : </label>
+
+                <p-fileUpload (onUpload)="onBasicUpload($event)" [maxFileSize]="500000" [multiple]="true" name="image[]" accept="image/*">
+                </p-fileUpload>
+            </div> -->
+        </mat-step>
+
+        <mat-step label="اسئلة {{subjectName}}" [completed]="preview">
+            <div class="question">
+                <form [formGroup]="questionForm">
+                    <mat-form-field class="queiz" appearance="outline" color="accent">
+                        <mat-label>السؤال</mat-label>
+                        <input type="text" matInput formControlName="question">
+                    </mat-form-field>
+
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <mat-radio-button value="answer1" color="accent" (change)="getCorrectAnswer($event)">
+                            </mat-radio-button>
+                            <mat-form-field color="accent" class="matFormField">
+                                <mat-label>الإجابة أ</mat-label>
+                                <input type="text" matInput formControlName="answer1">
+                            </mat-form-field>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <mat-radio-button value="answer1" color="accent" (change)="getCorrectAnswer($event)">
+                            </mat-radio-button>
+                            <mat-form-field color="accent">
+                                <mat-label>الإجابة ب</mat-label>
+                                <input type="text" matInput formControlName="answer2">
+                            </mat-form-field>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <mat-radio-button value="answer1" color="accent" (change)="getCorrectAnswer($event)">
+                            </mat-radio-button>
+                            <mat-form-field color="accent">
+                                <mat-label>الإجابة جـ</mat-label>
+                                <input type="text" matInput formControlName="answer3">
+                            </mat-form-field>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <mat-radio-button value="answer1" color="accent" (change)="getCorrectAnswer($event)">
+                            </mat-radio-button>
+                            <mat-form-field color="accent">
+                                <mat-label>الإجابة د</mat-label>
+                                <input type="text" matInput formControlName="answer4">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="questBtn">
+                        <div>
+                            <button mat-raised-button matStepperNext color="primary" class="btn btn-success" (click)="submitAll()" disabled="{{questions.length ? false : true}}">
+                                {{preview ? 'عرض' : 'إنتهاء'}}
+                            </button>
+                            <button mat-raised-button matStepperPrevious color="warn" class="btn btn-warn" (click)="cancelAll()">إلغاء الإختبار</button>
+                        </div>
+                        <div>
+                            <button mat-raised-button color="warn" (click)="clearForm()">حذف السؤال</button>
+                            <button mat-raised-button class="theGreen" [disabled]="questionForm.invalid" (click)="createQuestion()">حفظ السؤال</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </mat-step>
+
+        <!--  -->
+        <mat-step label="عرض الإختبار" completed="false">
+            <div class="examPreview">
+                <div class="examhead text-center">
+                    <h2>اختبار {{subjectName}}</h2>
+                </div>
+                <div class="quizPreview" *ngFor="let item of questions; let index = index">
+                    <strong><span class="text-danger">سؤال {{index+1}}</span> : {{item.question}}</strong>
+                    <div class="row" dir="rtl">
+                        <div class="sm:col-12 md:col-6 lg:col-6">
+                            أ. {{item.answer1}}
+                        </div>
+                        <div class="sm:col-12 md:col-6 lg:col-6">
+                            ب. {{item.answer2}}
+                        </div>
+                        <div class="sm:col-12 md:col-6 lg:col-6">
+                            جـ. {{item.answer3}}
+                        </div>
+                        <div class="sm:col-12 md:col-6 lg:col-6">
+                            د. {{item.answer4}}
+                        </div>
+                        <div class="sm:col-12 md:col-6 lg:col-6">
+                            <span class="text-success">الإجابة الصحيحة : {{item.correctAnswer}}</span>
+                        </div>
+                    </div>
+                    <div class="text-start">
+                        <button color="warn" mat-raised-button (click)="deleteQuestion(index)">
+                            حذف السؤال
+                        </button>
+                        <!-- <button class="btn btn-info" mat-raised-button (click)="editQuestion(index)">
+                            تعديل السؤال
+                        </button> -->
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </mat-step>
+
+
+    </mat-horizontal-stepper>
+</div>

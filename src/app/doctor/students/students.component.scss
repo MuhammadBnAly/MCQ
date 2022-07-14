@@ -1,0 +1,22 @@
+@import '../../styles/colors';
+:host {
+     ::ng-deep {
+        .students {
+            padding: 50px 0;
+            table {
+                width: 100%;
+                background-color: $bgColorLightr;
+                thead {
+                    tr {
+                        // background-color: #7a36f4;
+                        background-image: linear-gradient(to bottom right, $green, #0f9);
+                        th {
+                            color: $white;
+                            font-size: 22px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
